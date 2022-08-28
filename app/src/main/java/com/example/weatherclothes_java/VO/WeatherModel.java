@@ -12,13 +12,5 @@ public class WeatherModel {
     private final WeatherSysModel sys;
     private final WeatherCloudsModel clouds;
 
-    public WeatherModel(String name, List<WeatherDetailModel> weather, WeatherMainModel main, WeatherWindModel wind, WeatherSysModel sys, WeatherCloudsModel clouds){
-        this.name = name;
-        this.weather = weather;
-        this.main = main;
-        this.wind = wind;
-        this.sys = sys;
-        this.clouds = clouds;
-    }
 
 }
