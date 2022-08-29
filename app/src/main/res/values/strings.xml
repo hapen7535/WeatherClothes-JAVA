@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">weatherClothes-JAVA</string>
+    <string name="title">오늘 뭐 입지</string>
 </resources>
