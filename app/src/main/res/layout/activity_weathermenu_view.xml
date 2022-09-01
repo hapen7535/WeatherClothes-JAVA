@@ -6,11 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".WeathermenuView"
     android:background="@color/background_main_lime"
+    android:clipToPadding="false"
     >
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:clipToPadding="false"
         android:layout_height="match_parent">
 
         <ImageView
@@ -18,7 +18,9 @@
             android:layout_width="320dp"
             android:layout_height="620dp"
             android:layout_centerInParent="true"
-            android:background="#ffffff"
+            android:background="@android:color/white"
+            android:elevation="10dp"
+            android:hardwareAccelerated="true"
             android:scaleType="centerCrop" />
 
         <TextView
@@ -32,6 +34,7 @@
             android:text="오늘 뭐 입지"
             android:textSize="20sp"
             android:includeFontPadding="false"
+            android:translationZ="90dp"
             android:fontFamily="@font/duggobi"
             android:textColor="@color/brown_title" />
 
@@ -40,6 +43,7 @@
             android:layout_height="wrap_content"
             android:text="오늘의 날씨는 아래와 같습니다"
             android:fontFamily="@font/notosanskrbold"
+            android:translationZ="90dp"
             android:textSize="15sp"
             android:textColor="@color/brown_title"
             android:includeFontPadding="false"
@@ -49,6 +53,7 @@
         />
 
         <ImageView
+            android:translationZ="90dp"
             android:id="@+id/weather_icon_iv"
             android:layout_width="120dp"
             android:layout_height="120dp"
@@ -58,18 +63,20 @@
             android:src="@drawable/rainyicon" />
 
         <TextView
+            android:translationZ="90dp"
+            android:id="@+id/weather_info_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/notosanskrbold"
-            android:text="Rainy"
-            android:id="@+id/weather_info_tv"
-            android:layout_centerHorizontal="true"
             android:layout_below="@id/weather_icon_iv"
-            android:textSize="25sp"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/notosanskrbold"
+            android:includeFontPadding="false"
+            android:text="Rainy"
             android:textColor="@color/brown_title"
-            />
+            android:textSize="25sp" />
 
         <LinearLayout
+            android:translationZ="90dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/weather_info_tv"
@@ -78,6 +85,7 @@
             android:layout_centerHorizontal="true">
 
             <TextView
+                android:translationZ="90dp"
                 android:id="@+id/temperature_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -88,6 +96,7 @@
                 android:textSize="25sp" />
 
             <TextView
+                android:translationZ="90dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/notosanskrbold"
@@ -99,43 +108,43 @@
         </LinearLayout>
 
         <ImageView
+            android:translationZ="90dp"
             android:id="@+id/line1"
             android:layout_width="280dp"
             android:layout_height="1.5dp"
             android:layout_below="@id/temperature_info_layout"
             android:layout_centerHorizontal="true"
-            android:background="#CCBDBDBD"
-            android:layout_marginTop="25dp" />
+            android:layout_margin="30dp"
+            android:background="#CCBDBDBD" />
 
 
         <TextView
+            android:translationZ="90dp"
             android:id="@+id/weather_clothes_btn_tv"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_below="@id/line1"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/notosanskrbold"
-            android:includeFontPadding="false"
             android:text="오늘의 옷차림 보기"
             android:textColor="@color/brown_title"
             android:textSize="27sp" />
 
         <TextView
+            android:translationZ="90dp"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:text="오늘의 날씨, 기온에 맞는\n 옷차림을 찾아보세요"
             android:fontFamily="@font/notosanskrbold"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:textColor="@color/brown_title"
             android:layout_centerHorizontal="true"
             android:layout_below="@id/weather_clothes_btn_tv"
+            android:gravity="center"
             />
 
 
-
-
     </RelativeLayout>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
