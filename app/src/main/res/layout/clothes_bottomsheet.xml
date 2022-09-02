@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="오늘의 날씨, 기온에 맞는\n 옷차림은 다음과 같습니다"
+        android:fontFamily="@font/notosanskrbold"
+        android:textSize="20sp"
+        android:textColor="@color/brown_title"
+        android:layout_marginTop="10dp"
+        android:id="@+id/bottomsheet_description"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="15dp"
+        android:id="@+id/clothes_icon_layout"
+        app:layout_constraintTop_toBottomOf="@id/bottomsheet_description"
+        >
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/jacket_icon"
+        android:layout_margin="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/weather_icon_iv1"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_margin="10dp"
+            android:layout_height="80dp"
+            android:src="@drawable/jacket_icon"
+            app:layout_constraintStart_toEndOf="@id/weather_icon_iv1"
+            android:id="@+id/weather_icon_iv2"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/jacket_icon"
+            app:layout_constraintStart_toEndOf="@id/weather_icon_iv2"
+            android:id="@+id/weather_icon_iv3"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/clothes_icon_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="자켓 자켓 자켓 자켓"
+        android:fontFamily="@font/notosanskrbold"
+        android:textSize="25sp"
+        android:textColor="@color/brown_title"
+        android:layout_marginTop="10dp"
+        android:id="@+id/clothes_kind_description_tv"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
